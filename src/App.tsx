@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <PostContext.Provider value={{ posts, handleSetPosts, handleRemoveLastPost, updatePost }}>
-        <Router basename="/Homework-03-Create-Post">
+        <Router basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/new-post" element={<NewPost />} />
